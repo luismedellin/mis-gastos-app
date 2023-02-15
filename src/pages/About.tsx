@@ -15,7 +15,7 @@ export const About = () => {
 
         getMessage();
 
-    }, []);
+    }, [getProtectedResource]);
 
     return (
         <>

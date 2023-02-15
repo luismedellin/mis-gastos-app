@@ -20,7 +20,7 @@ export const Navigation = () => {
         if(isAuthenticated) {
             getToken();
         }
-    }, [isAuthenticated])
+    }, [getAccessTokenSilently, isAuthenticated])
 
     return (
         <div>
