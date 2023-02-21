@@ -10,10 +10,7 @@ export const PrivateRoute = ({ children }: Props) => {
     const { pathname, search } = useLocation();
     localStorage.setItem('lastPath', `${pathname+search}`);
 
-    // return isAuthenticated
-    //     ? children
-    //     : <Navigate to='/' />
-    return (
-        <>{ children }</>
-    )
+    return isAuthenticated
+        ? children
+        : <Navigate to='/login' />
 }
