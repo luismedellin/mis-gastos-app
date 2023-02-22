@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body, #root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main {flex: 1; display: flex;}
+.main-article, .main-section {flex: 2 2 12em;}
+.main-nav, .main-aside { flex: 1; }
+
+
+@media screen and (max-width: 500px) {    
+    main { flex-direction: column; }
+    .main-article, .main-section{flex:1; }  
+    .main-nav, .main-aside { flex: none; }
+}
+
+header,footer,nav,article,aside { box-sizing: border-box;/* padding: 1em; */}
+
+@media screen and (max-width: 500px) {    
+    main { flex-direction: column; }
+    .main-article, .main-section{flex:1; }  
+    .main-nav, .main-aside { flex: none; }
+}
+
+@media (max-width:767px){
+    .page-footer {
+        padding-top: 2rem !important;
+        padding-bottom: 0.3rem !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        .page-footer-header {
+            padding: 0 !important;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+        }
+    }    
+}
+
+@media (min-width: 768px) { 
+    #LoginPage > div {
+        border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+    }
+
+    #navbarLogout {
+        justify-content: flex-end !important;
+    }
 }
