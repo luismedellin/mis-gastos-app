@@ -23,18 +23,19 @@ export const AppRouter = () => {
     
     return (
     <Routes>
-        <Route path="login/*" element={
+        
+        <Route path="mis-gastos/*" element={
+            <PrivateRoute>
+                <MisGastosRoutes />
+            </PrivateRoute>
+        } />
+
+        <Route path="*" element={
             <PublicRoute>
                 <Routes>
                     <Route path="/*" element={<Home />} />
                 </Routes>
             </PublicRoute>
-        } />
-
-        <Route path="/*" element={
-            <PrivateRoute>
-                <MisGastosRoutes />
-            </PrivateRoute>
         } />
         
     </Routes>

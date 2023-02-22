@@ -1,13 +1,14 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { Dashboard } from '../pages/Dashboard'
+import { DashboardPage, SummaryPage } from '..'
 
 export const MisGastosRoutes = () => {
   return (
     <>
         <Routes>
-            <Route path="mis-gastos" element={ <Dashboard /> } />
+            <Route path="/resumen" element={ <SummaryPage /> } />
+            <Route path="/dashboard" element={ <DashboardPage /> } />
 
-            <Route path="/*" element={ <Navigate to="/mis-gastos" /> } />
+            <Route path="/*" element={ <Navigate to="/mis-gastos/dashboard" /> } />
         </Routes>
     </>
   )

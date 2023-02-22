@@ -9,5 +9,5 @@ export const PublicRoute = ({ children }: Props) => {
 
     return !isAuthenticated
         ? children
-        : <Navigate to="/mis-gastos" />
+        : <Navigate to="/mis-gastos/dashboard" />
 }

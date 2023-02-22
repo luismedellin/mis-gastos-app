@@ -1,5 +1,7 @@
 import { LoginButton } from "../auth"
 
+import './styles.css';
+
 export const Home = () => {
 
 
