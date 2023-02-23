@@ -26,5 +26,11 @@ export const routes: Route[] = [
         to: '/mis-gastos/resumen',
         // Component: SummaryPage,
         name: 'Resumen'
+    },
+    {
+        path: '/maestro',
+        to: '/mis-gastos/maestros',
+        // Component: SummaryPage,
+        name: 'Maestros'
     }
 ]

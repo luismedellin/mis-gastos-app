@@ -1,12 +1,9 @@
-import React from 'react'
-import { Navbar } from '../ui'
+import { MisGastosLayout } from './MisGastosLayout'
 
 export const SummaryPage = () => {
   return (
-    <>
-      <Navbar />
-      <div>SummaryPage</div>
-    </>
-    
+    <MisGastosLayout>
+        <h1>Summary Page</h1>
+    </MisGastosLayout>
   )
 }

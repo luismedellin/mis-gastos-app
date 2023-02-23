@@ -1,13 +1,10 @@
-import { Navbar } from "../ui"
+import { MisGastosLayout } from './MisGastosLayout';
 
 export const DashboardPage = () => {
   
   return (
-    <>
-      <Navbar />
-      <main className="container">
-        <h1>Dashboard Page</h1>
-      </main>
-    </>
+    <MisGastosLayout>
+      <h1>Dashboard Page</h1>
+    </MisGastosLayout>
   )
 }
