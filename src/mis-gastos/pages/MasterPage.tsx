@@ -4,13 +4,12 @@ import { usePaymentMethods } from '../../hooks';
 
 export const MasterPage = () => {
 
-  const { getPaymentMethods } = usePaymentMethods();
+  const { getPaymentMethods, paymentMethods } = usePaymentMethods();
 
   useEffect(() => {
 
     const getPaymentMethodsApi = async () => { 
         const paymentMethods = await getPaymentMethods();
-
         console.log(paymentMethods);
     }
 
@@ -25,8 +24,9 @@ export const MasterPage = () => {
           <div className="row">
             <h1>Maestros</h1>
           </div>
-
-          <PaymentMethods />
+          {
+            paymentMethods && <PaymentMethods />
+          }
         </div>
     </MisGastosLayout>
   )
